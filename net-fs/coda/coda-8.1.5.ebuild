@@ -6,7 +6,7 @@ EAPI=8
 inherit autotools linux-info
 
 DESCRIPTION="CODA Distributed Filesystem"
-HOMEPAGE="coda.cs.cmu.edu"
+HOMEPAGE="http://coda.cs.cmu.edu"
 SRC_URI="https://github.com/cmusatyalab/coda/archive/refs/tags/${P}.tar.gz"
 S="${WORKDIR}/${PN}-${P}"
 
@@ -21,7 +21,7 @@ If you only require the server you can safely ignore this message."
 DEPEND="
 dev-libs/libuv
 net-libs/gnutls
-=dev-lang/lua-5.1
+dev-lang/lua:5.1
 >=sys-libs/ncurses-6"
 
 RDEPEND="${DEPEND}"
