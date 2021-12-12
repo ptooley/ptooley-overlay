@@ -10,7 +10,7 @@ HOMEPAGE="coda.cs.cmu.edu"
 SRC_URI="https://github.com/cmusatyalab/coda/archive/refs/tags/${P}.tar.gz"
 S="${WORKDIR}/${PN}-${P}"
 
-LICENSE="GPL"
+LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
