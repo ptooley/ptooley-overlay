@@ -34,5 +34,5 @@ src_prepare(){
 }
 
 src_configure() {
-	econf --with-lua
+	econf --with-lua --without-python
 }
