@@ -21,11 +21,11 @@ If you only require the server you can safely ignore this message."
 DEPEND="
 dev-libs/libuv
 net-libs/gnutls
-dev-lang/lua
+=dev-lang/lua-5.1
 >=sys-libs/ncurses-6"
 
 RDEPEND="${DEPEND}"
-BDEPEND=""
+BDEPEND="virtual/pkgconfig"
 
 src_prepare(){
 	default
