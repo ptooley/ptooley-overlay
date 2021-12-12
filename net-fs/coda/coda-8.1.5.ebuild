@@ -14,7 +14,9 @@ LICENSE="GPL"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
-CONFIG_CHECK="CODA_FS"
+CONFIG_CHECK="~CODA_FS"
+WARNING_CODA_FS="The CODA client requires kernel module support from CONFIG_CODA_FS.
+If you only require the server you can safely ignore this message."
 
 DEPEND="
 dev-libs/libuv
