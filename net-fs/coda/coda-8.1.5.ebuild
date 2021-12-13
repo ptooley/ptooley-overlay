@@ -3,7 +3,9 @@
 
 EAPI=8
 
-inherit autotools linux-info
+PYTHON_COMPAT=( python3_{8,9,10} )
+
+inherit autotools linux-info python-single-r1
 
 DESCRIPTION="CODA Distributed Filesystem"
 HOMEPAGE="http://coda.cs.cmu.edu"
@@ -19,10 +21,14 @@ WARNING_CODA_FS="The CODA client requires kernel module support from CONFIG_CODA
 If you only require the server you can safely ignore this message."
 
 DEPEND="
-dev-libs/libuv
-net-libs/gnutls
-dev-lang/lua:5.1
->=sys-libs/ncurses-6"
+	dev-libs/libuv
+	net-libs/gnutls
+	dev-lang/lua:5.1
+	>=sys-libs/ncurses-6
+	$(python_gen_cond_dep '
+		dev-python/attrs[${PYTHON_USEDEP}]
+	')
+"
 
 RDEPEND="${DEPEND}"
 BDEPEND="virtual/pkgconfig"
