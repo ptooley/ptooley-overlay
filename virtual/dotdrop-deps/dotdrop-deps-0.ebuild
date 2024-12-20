@@ -8,7 +8,7 @@ DESCRIPTION="Virtal for dotdrop dependencies"
 SLOT="0"
 KEYWORDS="amd64 x86"
 DEPEND="
-	dev-python/jinja
+	dev-python/jinja2
 	dev-python/docopt
 	dev-python/ruamel-yaml
 	dev-python/python-magic
